@@ -1,0 +1,51 @@
+{
+    "name": "r3h6/form-parsley",
+    "type": "typo3-cms-extension",
+    "description": "Zurb Foundation 6 compatible form rendering.",
+    "homepage": "https://github.com/r3h6/TYPO3.EXT.form_parsley/",
+    "require": {
+        "typo3/cms": "^8.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.0",
+        "nimut/testing-framework": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "R3H6\\FormParsley\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "R3H6\\FormParsley\\Tests\\": "Tests",
+            "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/",
+            "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
+        }
+    },
+    "replace": {
+        "form_parsley": "self.version",
+        "typo3-ter/form-parsley": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin",
+        "preferred-install": {
+            "typo3/cms": "source"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p .Build/web/typo3conf/ext/",
+            "[ -L .Build/web/typo3conf/ext/form_parsley ] || ln -snvf ../../../../. .Build/web/typo3conf/ext/form_parsley"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/web"
+        }
+    }
+}

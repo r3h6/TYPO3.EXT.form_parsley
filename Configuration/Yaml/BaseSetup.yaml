@@ -1,0 +1,44 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          ########### DEFAULT FORM ELEMENT DEFINITIONS ###########
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  1497474937: 'EXT:form_parsley/Resources/Private/Frontend/Templates/'
+                partialRootPaths:
+                  1497474937: 'EXT:form_parsley/Resources/Private/Frontend/Partials/'
+                layoutRootPaths:
+                  1497474937: 'EXT:form_parsley/Resources/Private/Frontend/Layouts/'
+            GridContainer:
+              properties:
+                # overrules 'GridRow.properties.gridColumnClassAutoConfiguration'
+                gridColumnClassAutoConfiguration:
+                  gridSize: 12
+                  viewPorts:
+                    xs:
+                      classPattern: 'small-{@numbersOfColumnsToUse}'
+                    sm:
+                      classPattern: 'medium-{@numbersOfColumnsToUse}'
+                    md:
+                      classPattern: 'large-{@numbersOfColumnsToUse}'
+                    lg:
+                      classPattern: null
+            GridRow:
+              properties:
+                gridColumnClassAutoConfiguration:
+                  gridSize: 12
+                  viewPorts:
+                    col:
+                      classPattern: 'columns'
+                    xs:
+                      classPattern: 'small-{@numbersOfColumnsToUse}'
+                    sm:
+                      classPattern: 'medium-{@numbersOfColumnsToUse}'
+                    md:
+                      classPattern: 'large-{@numbersOfColumnsToUse}'
+                    lg:
+                      classPattern: null

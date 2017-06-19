@@ -1,0 +1,20 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:form_parsley/Configuration/TypoScript/setup.ts">
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            1497888536 = EXT:form_parsley/Configuration/Yaml/BaseSetup.yaml
+            # 1497888548 = EXT:form_parsley/Configuration/Yaml/FormEngineSetup.yaml
+        }
+    }
+}
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            1497888536 = EXT:form_parsley/Configuration/Yaml/BaseSetup.yaml
+            # 1497888542 = EXT:form_parsley/Configuration/Yaml/FormEditorSetup.yaml
+            # 1497888548 = EXT:form_parsley/Configuration/Yaml/FormEngineSetup.yaml
+        }
+    }
+}
+
